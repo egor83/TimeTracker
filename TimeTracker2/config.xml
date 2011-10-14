@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Configuration file. Should be kept in the same directory as executable. -->
+
+<ConfigType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <defaultModeIcon>..\..\..\icons\gray.ico</defaultModeIcon>
+  <dumpLocation>..\..\..\times\</dumpLocation>
+  <modes>
+    <Mode>
+      <Name>Code</Name>
+      <IconPath>..\..\..\icons\blue.ico</IconPath>
+    </Mode>
+    <Mode>
+      <Name>GCal</Name>
+      <IconPath>..\..\..\icons\green.ico</IconPath>
+    </Mode>
+    <Mode>
+      <Name>Games</Name>
+      <IconPath>..\..\..\icons\red.ico</IconPath>
+    </Mode>
+    <Mode>
+      <Name>Browse/Chat</Name>
+      <IconPath>..\..\..\icons\yellow.ico</IconPath>
+    </Mode>
+  </modes>
+</ConfigType>

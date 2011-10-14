@@ -1,0 +1,61 @@
+Description/major todos (list of minor todos below)
+
+- log analyzer: show time per day and mode; when the total time is more than 24 hours, split over two last days; handle cases w/ two data files for one day;
+(?) - display (blinking? some icon modification?) when the time limit is met;
+(later, ?) keep track of the current app name; query the user if the app doesn't belong to this mode OR let the user move a few last entries to another mode;
+
+DONE - resides in a tray;
+DONE - shows mode (GC/Code/other);
+DONE - counts time per mode;
+DONE - timer can be reset manually;
+DONE - show current mode/time in icon tooltip;
+
+
+Parts - DONE:
+DONE - tray icon/residential part:
+DONE   - timer
+DONE   - text shows current mode
+
+DONE - form that pops up on a click on a tray icon:
+DONE   - label showing the current time (updates in real time);
+DONE   - reset button
+DONE   - ? reset all button
+
+DONE - config file:
+DONE   - list of modes, per mode: name, icon/color
+
+DONE - tray icon context menu:
+  DONE - right click:
+    DONE - choose mode,
+    DONE - show current mode,
+DONE   - single left click - change between current and idle, and back
+DONE   - ctrl+click - bring up the form (was double-click, but that'd interfere w/ single click event)
+
+
+Minor todos
+
+- add readme
+
+- check provided dump location path, add trailing slash if missing;
+- when in 'Other', track idle time as a separate mode;
+- do I need 'reset current mode'? (disabled the button for now)
+- right click tray icon - choose mode, show current mode, display elapsed time per mode; (reuse code from UpdateModeListLabel());
+- allow switching modes from the form: add separate labels per mode, make current one bold, onClick label - switch to this mode;
+(?) - show time percentage per mode in a form;
+- autosize form depending on the number of modes;
+(?) - show 'bring up form'/'close' in context menu;
+- formatting times: adjust output, show time as a percentage of total;
+(?) - right-click tray icon: display elapsed time per mode;
+- check whether launching from startup goes okay/closing on restart/shotdown dumps times;
+
+DONE - focus on form on tray's ctrl+click;
+DONE - when I double-click, a single click event is handled first - bring up the form on Ctrl+click
+DONE - dump times on close;
+DONE - dump times on 'reset all modes';
+DONE - make a separate part handling all the logic (controller?); make form aware of this entity; call its methods on GUI/timer events; config belongs there too
+DONE - !!! make changes to the code to work w/the new config; make sure new config works okay;
+DONE - automatically put config.xml next to generated .exe; if config not found on load - display message in the form;
+DONE - review stuff, think where to put what (put config/icons inside of the project?);
+DONE - put modes and settings in the same file;
+DONE - remove config.cs when done
+DONE - move config&icon files inside projects, use relative paths;
